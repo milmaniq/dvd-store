@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+    </title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/signin-controller.js"></script>
+
+</head>
+<body>
+<div id="content">
+
+    <div id="navbar"></div>
+
+    <div class="container" id="container_properties">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-header">
+                                <h3>Sign in</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <form id="frmSignin">
+                                <input type="hidden" name="action" value="authenticateLogin">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input class="form-control" type="text" placeholder="Enter e-Mail or Username"
+                                           id="signinEmail"  name="signinEmail" onblur="ValidateSigninEmail()" />
+                                    <span class="val_fail" id="signin_email"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input class="form-control" type="password" placeholder="Password"
+                                           id="signinPassword" name="signinPassword" onblur="ValidateSigninPassword()" />
+                                    <span class="val_fail" id="signin_password"></span>
+                                    <label class="forgot_password"><a href="forgot_password.php">Forgot Password?</a></label>
+                                </div>
+                                <div class="form-group">
+                                    <span class="val_fail"><!--     --></span>
+                                </div>
+                                <div class="form-group text-center">
+                                    <div>
+                                        <button type="button" class="btn btn-danger" id="btnSignin" name="btnSignin" onclick="ValidateSigninForm()" >Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer"></div>
+
+
+</body>
+
+</html>

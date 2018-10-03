@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>e-Corner</title>
+
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/purchase-history-controller.js"></script>
+
+</head>
+<body>
+
+<div id="content">
+
+    <div id="navbar"></div>
+
+    <div class="container" id="container_properties">
+        <div class="row" id="dvd">
+            <div class="section">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-header">
+                            <h3>Purchase History</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row dvd_section">
+                    <div class="col-sm-12">
+                        <table class="table table-stripped" id="tblPurchase">
+                            <thead>
+                            <tr>
+                                <th>Poster</th>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                                <th>Discounted Price</th>
+                                <th>Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td class='text-center cart_discounted_price' id="purchaseFoot" colspan="5">Sorry, you have
+                                    not ordered anything yet!
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="footer"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>e-Corner</title>
+
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/profile-controller.js"></script>
+
+</head>
+<body>
+
+<div id="content">
+
+    <div id="navbar"></div>
+
+    <div class="container" id="container_properties">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-header">
+                                <h3>Profile Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <form id="frmProfileName">
+                                <input type="hidden" name="action" value="updateProfileName">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label>First Name</label>
+                                        <input class="form-control" type="text" placeholder="First Name"
+                                               id="profileFirstName" name="profileFirstName"
+                                               onblur="ValidateProfileFirstName()"/>
+                                        <span class="val_fail" id="profile_first_name"></span>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label>Last Name</label>
+                                        <input class="form-control" type="text" placeholder="Last Name"
+                                               id="profileLastName" name="profileLastName"
+                                               onblur="ValidateProfileLastName()"/>
+                                        <span class="val_fail" id="profile_last_name"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group text-center">
+                                        <div>
+                                            <button type="button" id="btnProfileNameSubmit" class="btn btn-danger"
+                                                    onclick="ValidateProfileNameForm()"><span
+                                                    class="dvd_col_data">Save</span></button>
+
+                                        </div>
+                                        <span class="val_fail" id="frmProfileName_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-header">
+                                <h3>Profile Pic</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <form id="frmProfilePic">
+                                <input type="hidden" name="action" value="updateProfilePic">
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Your current Profile Pic</label>
+                                        <br>
+                                        <img class="text-center profile_pic" id="profilePicView">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>To change your profile pic, select a picture and click Save</label>
+                                        <input type="file" id="profilePic" name="profilePic"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group text-center">
+                                        <button type="button" id="btnProfilePicSubmit" class="btn btn-danger"
+                                                onclick="ValidateProfilePicForm()"><span
+                                                class="dvd_col_data">Save</span></button>
+                                    </div>
+                                    <span class="val_fail" id="frmProfilePic_result"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-header">
+                                <h3>Change Password</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form role="form" id="frmProfilePassword">
+                                <input type="hidden" name="action" value="updateProfilePassword">
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" placeholder="Password"
+                                               id="profilePassword" name="profilePassword"
+                                               onblur="ValidateProfilePassword()"/>
+                                        <span class="val_fail" id="profile_password"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>New Password</label>
+                                        <input class="form-control" type="password" placeholder="Password"
+                                               id="profileNewPassword" name="profileNewPassword"
+                                               onblur="ValidateProfileNewPassword()"/>
+                                        <span class="val_fail" id="profile_new_password"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Confirm Password</label>
+                                        <input class="form-control" type="password" placeholder="Re-enter Password"
+                                               id="profileConfirmPassword" name="profileConfirmPassword"
+                                               onblur="ValidateProfileConfirmPassword()"/>
+                                        <span class="val_fail" id="profile_confirm_password"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group text-center">
+                                        <div>
+                                            <button type="button" name="btnChangePasswordSubmit" class="btn btn-danger"
+                                                    onclick="ValidateChangePasswordForm()"><span class="dvd_col_data">Save</span>
+                                            </button>
+                                        </div>
+                                        <span class="val_fail" id="frmProfilePassword_result"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+</div>
+
+</body>
+</html>

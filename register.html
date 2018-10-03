@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+    </title>
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/bootstrap-formhelpers.min.js"></script>
+    <script src="dist/js/register-controller.js"></script>
+
+
+
+</head>
+<body>
+<div id="content">
+    <div id="navbar"></div>
+
+    <div class="container" id="container_properties">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-header">
+                                <h3>Register</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <form role="form" id="frmRegister">
+                                <input type="hidden" name="action" value="registerCustomer">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label>First Name</label>
+                                        <input class="form-control" type="text" placeholder="First Name"
+                                               id="registerFirstName" name="registerFirstName" onblur="ValidateRegisterFirstName()" />
+                                        <span class="val_fail" id="register_first_name"></span>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label>Last Name</label>
+                                        <input class="form-control" type="text" placeholder="Last Name"
+                                               id="registerLastName" name="registerLastName" onblur="ValidateRegisterLastName()" />
+                                        <span class="val_fail" id="register_last_name"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>e-Mail</label>
+                                        <input class="form-control" type="email" placeholder="Enter e-Mail"
+                                               id="registerEmail" name="registerEmail" onblur="ValidateRegisterEmail()" />
+                                        <span class="val_fail" id="register_email"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" placeholder="Password"
+                                               id="registerPassword" name="registerPassword" onblur="ValidateRegisterPassword()" />
+                                        <span class="val_fail" id="register_password"></span>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label>Confirm Password</label>
+                                        <input class="form-control" type="password" placeholder="Re-enter Password"
+                                               id="registerConfirmPassword" name="registerConfirmPassword" onblur="ValidateRegisterConfirmPassword()" />
+                                        <span class="val_fail" id="register_confirm_password"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Gender:</label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" value="Male" id="registerMale" name="registerGender"
+                                                       onblur="return ValidateRegisterGender()" /> Male
+                                            </label>
+                                            <label>
+                                                <input type="radio" value="Female" id="registerFemale" name="registerGender"
+                                                       onblur="return ValidateRegisterGender()" /> Female
+                                            </label>
+                                            <span class="val_fail" id="register_gender"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Street Address</label>
+                                        <textarea class="form-control" rows="2" cols="30" placeholder="Street Address"
+                                                  id="registerStreetAddress" name="registerStreetAddress" onblur="ValidateRegisterStreetAddress()" ></textarea>
+                                        <span class="val_fail" id="register_street_address"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-4 form-group">
+                                        <label>City</label>
+                                        <input class="form-control" type="text" placeholder="City"
+                                               id="registerCity" name="registerCity" onblur="ValidateRegisterCity()" >
+                                        <span class="val_fail" id="register_city"></span>
+                                    </div>
+
+
+                                    <div class="col-sm-4 form-group">
+                                        <label>Country</label>
+                                        <select class="input-medium bfh-countries form-control"
+                                                id="registerCountry" name="registerCountry" onblur="ValidateRegisterCountry()" ></select>
+                                        <span class="val_fail" id="register_country"></span>
+                                    </div>
+
+                                    <div class="col-sm-4 form-group">
+                                        <label>State/Province</label>
+                                        <select class="input-medium bfh-states form-control" data-country="registerCountry"
+                                                id="registerState" name="registerState" onblur="ValidateRegisterState()" ></select>
+                                        <span class="val_fail" id="register_state"></span>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <label>Mobile</label>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="input-medium bfh-phone form-control" data-country="registerCountry"
+                                                       id="registerCountryCode" name="registerCountryCode" readonly />
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input class="form-control" type="text" placeholder="Mobile Number"
+                                                       id="registerMobile" name="registerMobile" onblur="ValidateRegisterMobile()" />
+                                                <span class="val_fail" id="register_mobile"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="registerAgreement" name="registerAgreement" value="1"
+                                                       onblur="ValidateRegisterAgreement()" /> I agree to the e-Corner User Agreement
+                                            </label>
+                                            <br />
+                                            <span class="val_fail" id="register_agreement"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group text-center">
+                                        <div>
+                                            <button type="button" name="btnRegisterSubmit" class="btn btn-danger" onclick="ValidateRegisterForm()"><span class="dvd_col_data">Register</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+
+</body>
+
+</html>

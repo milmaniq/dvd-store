@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>e-Corner</title>
+
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/contact-us-controller.js"></script>
+
+</head>
+<body>
+
+<div id="content">
+
+    <div id="navbar"></div>
+
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Contact Us</li>
+        </ul>
+    </div>
+
+    <div class="container" id="container_properties">
+        <div class="section">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-header">
+                        <h3>Contact Us</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row vcenter">
+                <div class="col-sm-5">
+
+                    <h4>Business Hours</h4>
+                    <p>Monday - Sunday: 10.00 AM - 7.00 PM</p>
+
+                    <p><i class="fas fa-map-marker-alt"></i>&nbsp;100, Diggala Road, Keselwatte, Panadura</p>
+
+                    <p><i class="fas fa-phone"></i>&nbsp;+94 38 2233456</p>
+
+                    <p><i class="fas fa-envelope"></i>&nbsp;e_corner@gmail.com</p>
+
+                </div>
+
+                <div class="col-sm-7">
+                    <form id="frmContact">
+                        <input type="hidden" name="action" value="insertContactUs">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="contactName" name="contactName" placeholder="Name"
+                                       type="text" onblur="ValidateContactName()" />
+                                <span class="val_fail" id="contact_name"></span>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="contactEmail" name="contactEmail" placeholder="Email"
+                                       type="email" onblur="ValidateContactEmail()" />
+                                <span class="val_fail" id="contact_email"></span>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="contactComment" name="contactComment" placeholder="Comment"
+                                  rows="5" onblur="ValidateContactComment()"></textarea><br>
+                        <span class="val_fail" id="contact_comment"></span>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-default pull-right" type="button" id="btnContactSubmit"
+                                        onclick="ValidateContactForm()">Send</button><br>
+                                <span class="val_fail" id="contact_success"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="map" style="width:100%;height:400px;"></div>
+
+
+                <script>
+                    function myMap() {
+                        var myCenter = new google.maps.LatLng(6.749586,79.901120);
+                        var mapCanvas = document.getElementById("map");
+                        var mapOptions = {center: myCenter, zoom: 15};
+                        var map = new google.maps.Map(mapCanvas, mapOptions);
+                        var marker = new google.maps.Marker({position:myCenter});
+                        marker.setMap(map);
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA24lKsjTdubq1alkgRZMfZKrjVu-rx9HU&callback=myMap"></script>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+</body>
+</html>

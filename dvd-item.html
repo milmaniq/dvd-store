@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+
+    </title>
+
+    <link rel="icon" href="images/logo/ecorner.jpg" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+          crossorigin="anonymous">
+
+    <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/common-assets-controller.js"></script>
+
+    <script src="dist/js/dvd-item-controller.js"></script>
+
+</head>
+<body>
+<div id="content">
+
+    <div id="navbar"></div>
+
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li id="breadcrumb_category"><!--     --></li>
+            <li class="active"><!--     --></li>
+        </ul>
+    </div>
+    <div class="container" id="container_properties">
+        <div class="section">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row" id="poster">
+                        <!-- -->
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="page-header">
+                        <h3 id="title"><!-- --></h3>
+                        <div class="row">
+                            <div class="col-sm-3 hidden-xs">
+                                <h5 id="stock">Available: <!-- --></h5>
+                            </div>
+                            <div class="col-sm-3">
+                                <h5 id="discount">Discount: <!-- --></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <p class="dvd_col_title">Director</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="dvd_col_data" id="director"><!-- --></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <p class="dvd_col_title">Cast</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="dvd_col_data" id="cast"><!-- --></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <p class="dvd_col_title">Producer</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="dvd_col_data" id="producer"><!-- --></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <p class="dvd_col_title">Price</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="dvd_col_data" id="price"><!-- --></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-2">
+                            <p class="dvd_col_title">Shipping</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <p class="dvd_col_data" id="shipping"><!-- --></p>
+                        </div>
+                    </div>
+                    <div id="frmQuantity">
+                        <div class="row">
+                            <div class="col-sm-2 col-sm-offset-2">
+                                <p class="dvd_col_title">Quantity</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <input class="form-group form-control" type="number" id="quantity" name="quantity" min="1">
+                                <span class="val_fail" id="error"><!-- --></span>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-danger text-center" id="btnAddToCart">
+                                    <span class="dvd_col_data">Add to Cart</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+
+</body>
+</html>
