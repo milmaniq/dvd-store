@@ -23,3 +23,7 @@ Therefore, it can be said that this Online DVD Store is an ultimate solution for
 * MySQL
 * Heidi SQL
 * IntelliJ IDEA
+
+
+## Application Architecture
+* Layered Architecture (Web MVC-2)
